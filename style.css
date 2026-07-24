@@ -1,97 +1,377 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #0b1026;
+    background: #080d24;
     color: white;
-}
-
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background: #111936;
-}
-
-nav h2 {
-    font-size: 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: #8ea7ff;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-}
-
-.hero h1 {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    color: #b8c1ec;
-    font-size: 20px;
-    max-width: 600px;
-    margin: auto;
     line-height: 1.6;
 }
 
+
+/* Navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: rgba(8, 13, 36, 0.95);
+    border-bottom: 1px solid #202b5c;
+}
+
+nav h2 {
+    font-size: 26px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #c8d0ff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        radial-gradient(circle at center, #202b68, transparent 45%),
+        #080d24;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.subtitle {
+    color: #8ea7ff;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #8ea7ff;
+}
+
+.hero-text {
+    color: #b8c1ec;
+    font-size: 19px;
+    max-width: 650px;
+    margin: auto;
+}
+
 button {
-    margin-top: 30px;
-    padding: 14px 30px;
     border: none;
     border-radius: 25px;
+
+    padding: 13px 25px;
+    margin-top: 25px;
+
     background: #536dfe;
     color: white;
-    font-size: 16px;
+
+    font-size: 15px;
+    font-weight: bold;
+
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
 button:hover {
     background: #7185ff;
+    transform: translateY(-3px);
 }
 
-/* Feature Cards */
-.features {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 40px;
+
+/* Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    max-width: 1100px;
+    margin: -50px auto 80px;
+
+    padding: 0 20px;
 }
 
-.card {
-    background: #151d42;
-    padding: 30px;
-    width: 280px;
-    min-height: 170px;
-    border-radius: 15px;
+.stat-card {
     text-align: center;
+
+    padding: 25px 15px;
+
+    background: #111936;
+    border: 1px solid #273366;
+    border-radius: 15px;
 }
 
-.card h3 {
-    font-size: 22px;
+.stat-card h2 {
+    font-size: 32px;
+    color: #8ea7ff;
+}
+
+.stat-card p {
+    color: #b8c1ec;
+}
+
+
+/* General Sections */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
-.card p {
+.section-heading > p:last-child {
     color: #b8c1ec;
-    line-height: 1.5;
+}
+
+
+/* Planet Cards */
+
+.planet-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.planet-card {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background: #111936;
+
+    border: 1px solid #273366;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.planet-card:hover {
+    transform: translateY(-8px);
+    border-color: #7185ff;
+}
+
+.planet-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.planet-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.planet-card p {
+    color: #b8c1ec;
+    min-height: 75px;
+}
+
+
+/* Mission Cards */
+
+.missions-section {
+    max-width: 1200px;
+}
+
+.mission-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.mission-card {
+    padding: 30px;
+
+    background: #111936;
+
+    border-radius: 18px;
+
+    border: 1px solid #273366;
+
+    transition: 0.3s;
+}
+
+.mission-card:hover {
+    transform: translateY(-8px);
+}
+
+.mission-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.mission-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.mission-card p {
+    color: #b8c1ec;
+}
+
+
+/* Astronomy Cards */
+
+.astronomy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.info-card {
+    padding: 30px;
+
+    background: linear-gradient(
+        145deg,
+        #151f46,
+        #0e1430
+    );
+
+    border-radius: 18px;
+
+    border: 1px solid #273366;
+}
+
+.info-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #b8c1ec;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #050817;
+
+    border-top: 1px solid #202b5c;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #b8c1ec;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .planet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .planet-grid,
+    .mission-grid,
+    .astronomy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
