@@ -1,54 +1,264 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceScope</title>
-    <link rel="stylesheet" href="style.css">
+
+```
+<title>SpaceScope | Explore the Universe</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
 
-    <nav>
-        <h2>🌌 SpaceScope</h2>
+```
+<!-- Navigation Bar -->
+<nav>
 
-        <div>
-            <a href="#home">Home</a>
-            <a href="#planets">Planets</a>
-            <a href="#missions">Missions</a>
-            <a href="#astronomy">Astronomy</a>
-        </div>
-    </nav>
+    <h2>🌌 SpaceScope</h2>
 
-    <section class="hero" id="home">
-        <h1>Explore Beyond the Stars 🚀</h1>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#planets">Planets</a>
+        <a href="#missions">Missions</a>
+        <a href="#astronomy">Astronomy</a>
+    </div>
 
-        <p>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="subtitle">WELCOME TO THE UNIVERSE</p>
+
+        <h1>
+            Explore Beyond<br>
+            <span>The Stars 🚀</span>
+        </h1>
+
+        <p class="hero-text">
             Discover planets, space missions, galaxies,
-            and the wonders of the universe.
+            cosmic events, and the mysteries of our universe.
         </p>
 
-        <button>Start Exploring</button>
-    </section>
+        <button onclick="showMessage()">
+            Start Exploring 🚀
+        </button>
 
-    <section class="features" id="planets">
+    </div>
 
-        <div class="card">
-            <h3>🪐 Planets</h3>
-            <p>Explore the planets and moons of our solar system.</p>
+</section>
+
+
+<!-- Quick Stats -->
+<section class="stats">
+
+    <div class="stat-card">
+        <h2>8</h2>
+        <p>Planets</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>∞</h2>
+        <p>Galaxies</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>🚀</h2>
+        <p>Space Missions</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>🌌</h2>
+        <p>Endless Discoveries</p>
+    </div>
+
+</section>
+
+
+<!-- Planets Section -->
+<section class="section" id="planets">
+
+    <div class="section-heading">
+
+        <p class="subtitle">OUR SOLAR SYSTEM</p>
+
+        <h2>Explore the Planets 🪐</h2>
+
+        <p>
+            Learn about the fascinating worlds orbiting our Sun.
+        </p>
+
+    </div>
+
+    <div class="planet-grid" id="planet-container">
+
+        <!-- Planet cards will be created using JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- Space Missions Section -->
+<section class="section missions-section" id="missions">
+
+    <div class="section-heading">
+
+        <p class="subtitle">BEYOND EARTH</p>
+
+        <h2>Space Missions 🚀</h2>
+
+        <p>
+            Humanity continues to explore the unknown.
+        </p>
+
+    </div>
+
+    <div class="mission-grid">
+
+        <div class="mission-card">
+
+            <div class="mission-icon">🌙</div>
+
+            <h3>Lunar Exploration</h3>
+
+            <p>
+                Discover the history and future of missions
+                exploring the Moon.
+            </p>
+
+            <button onclick="showMission('Lunar Exploration')">
+                Learn More
+            </button>
+
         </div>
 
-        <div class="card" id="missions">
-            <h3>🚀 Space Missions</h3>
-            <p>Discover past and upcoming missions beyond Earth.</p>
+
+        <div class="mission-card">
+
+            <div class="mission-icon">🔴</div>
+
+            <h3>Mars Exploration</h3>
+
+            <p>
+                Explore humanity's journey toward the Red Planet.
+            </p>
+
+            <button onclick="showMission('Mars Exploration')">
+                Learn More
+            </button>
+
         </div>
 
-        <div class="card" id="astronomy">
-            <h3>🔭 Astronomy</h3>
-            <p>Learn about stars, galaxies, and amazing cosmic events.</p>
+
+        <div class="mission-card">
+
+            <div class="mission-icon">🛰️</div>
+
+            <h3>Deep Space</h3>
+
+            <p>
+                Discover spacecraft travelling beyond our solar system.
+            </p>
+
+            <button onclick="showMission('Deep Space Exploration')">
+                Learn More
+            </button>
+
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+<!-- Astronomy Section -->
+<section class="section astronomy-section" id="astronomy">
+
+    <div class="section-heading">
+
+        <p class="subtitle">LOOK UP</p>
+
+        <h2>Discover Astronomy 🔭</h2>
+
+        <p>
+            The universe is filled with stars, galaxies,
+            black holes, and incredible cosmic phenomena.
+        </p>
+
+    </div>
+
+    <div class="astronomy-grid">
+
+        <div class="info-card">
+
+            <h3>⭐ Stars</h3>
+
+            <p>
+                Massive glowing spheres of gas that illuminate
+                the universe.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>🌌 Galaxies</h3>
+
+            <p>
+                Giant collections of stars, planets, gas,
+                and cosmic dust.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>🕳️ Black Holes</h3>
+
+            <p>
+                Regions of space where gravity is so powerful
+                that even light cannot escape.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <h2>🌌 SpaceScope</h2>
+
+    <p>
+        Explore. Discover. Understand the Universe.
+    </p>
+
+    <p class="copyright">
+        © 2026 SpaceScope | Built for curious minds 🚀
+    </p>
+
+</footer>
+
+
+<!-- JavaScript Connection -->
+<script src="script.js"></script>
+```
 
 </body>
+
 </html>
