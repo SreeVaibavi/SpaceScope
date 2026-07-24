@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -8,16 +9,89 @@ body {
     font-family: Arial, sans-serif;
     background: #0b1026;
     color: white;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #111936;
+}
+
+nav h2 {
+    font-size: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #8ea7ff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #b8c1ec;
+    font-size: 20px;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 30px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 25px;
+    background: #536dfe;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7185ff;
+}
+
+/* Feature Cards */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+}
+
+.card {
+    background: #151d42;
+    padding: 30px;
+    width: 280px;
+    min-height: 170px;
+    border-radius: 15px;
     text-align: center;
 }
 
-h1 {
-    margin-top: 100px;
-    font-size: 50px;
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
-p {
-    margin-top: 20px;
-    font-size: 20px;
+.card p {
     color: #b8c1ec;
+    line-height: 1.5;
 }
